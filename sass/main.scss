@@ -1,0 +1,73 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/fonts";
+@import "nav";
+@import "header";
+@import "features";
+@import "advantage";
+@import "solutions";
+@import "testimonials";
+@import "payment";
+@import "footer";
+
+
+html, body {
+	@include clean;
+	width: 100%;
+	color: $color-black;
+	font-family: 'Roboto-Regular', 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	@include clean;
+}
+
+a {
+	text-decoration: none;
+}
+
+.view-port {
+	width: $view-port;
+	margin: 0 auto;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	overflow: hidden;
+	background-color: $color-white;
+}
+
+.btn {
+	padding: 15px 20px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+	outline: none;
+	font-size: 20px;
+	transition: .1s all;
+
+
+	&:active {
+		box-shadow: inset 0 0 20px -3px rgba(0, 0, 0, .6);
+	}
+
+	&-click {
+		background: transparent;
+		border: 1px solid $color-black;
+		color: $color-black;
+	}
+
+	&-red {
+		background-color: $color-red;
+		color: $color-white;
+	}
+
+}
+
+.q {
+	border-top: 1px solid $color-black;
+	padding-top: 20px;
+}

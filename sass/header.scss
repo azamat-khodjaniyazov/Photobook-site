@@ -1,0 +1,35 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+
+#header {
+	@include flex-center;
+	justify-content: flex-start;
+	padding-top: 40px;
+	background: url('../img/header_bg.jpg') no-repeat center center/cover;
+	height: 547px;
+
+		& .title {
+			text-align: center;
+			margin-bottom: 55px;
+
+			& * {
+				font-weight: normal;
+			}
+
+			& .title-span {
+				font-size: 70px;
+			}
+
+			& h1 {
+				font-size: 45px;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+			}
+			& h4 {
+				font-size: 22px;
+				
+			}
+		}
+
+}

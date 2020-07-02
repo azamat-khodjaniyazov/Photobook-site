@@ -1,0 +1,149 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+
+#solutions {
+	background-color: $color-white;
+	padding: 50px 40px 70px;
+
+	& h1 {
+		text-transform: uppercase;
+		font-size: 35px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	& .solutions-span {
+		font-size: 45px;
+		font-weight: bold;
+	}
+
+	& .row {
+		display: flex;
+		justify-content: space-around;
+
+		& .tile {
+			position: relative;
+			width: 25%;
+			padding: 5px;
+			border-radius: 5px;
+			background-color: $color-yellow;
+
+			& .bestseller {
+				position: relative;
+				display: flex;
+				justify-content: center;
+
+				& > div {
+					position: absolute;
+					background-color: $color-yellow;
+				}
+				
+				& .left {
+					transform: rotate(45deg);
+					width: 30px;
+					height: 27px;
+					left: 43px;
+					top: -17px;
+				}
+
+				& .text {
+					top: -24px;
+					padding: 6px 20px 0;
+					color: $color-red;
+					font-weight: bold;
+					text-transform: uppercase;
+					font-size: 15px;
+					letter-spacing: 1px;
+				}
+
+				& .right {
+					transform: rotate(45deg);
+					height: 26px;
+					width: 30px;
+					right: 39px;
+					top: -17px;
+				}
+
+			}
+
+			& .header {
+				padding: 30px;
+
+				& h3 {
+					font-size: 20px;
+					font-weight: normal;
+					text-transform: uppercase;
+				}
+
+				& .header__span {
+					font-size: 28px;
+				}
+
+			}
+
+			& .content {
+				position: relative;
+				padding: 15px;
+				height: 200px;
+				margin-bottom: 10px;
+				background-color: $color-white;
+
+				& ul {
+					@include clean;
+					list-style-image: url('../img/checkbox.png');
+					padding: 10px 0 0 30px;
+
+					& li {
+						padding-left: 10px;
+						font-weight: bold;
+						font-size: 13px;
+
+						& .content__text {
+							position: relative;
+							top: -7px;
+						}
+
+					}
+
+				}
+
+				& .cost {
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					width: 100%;
+					bottom: 10px;
+					right: 5px;
+					font-size: 50px;
+				}
+
+			}
+
+			& .footer {
+					text-align: center;
+					margin-bottom: 10px;
+					font-weight: bold;
+
+				& .solutions-footer-span-1 {
+					text-transform: uppercase;
+					font-weight: bold;
+					font-size: 16px;
+				}
+
+					& .solutions-footer-span-2 {
+						text-transform: uppercase;
+						font-weight: normal;
+						font-size: 13px;
+					}
+
+
+			}
+
+		}
+
+	}
+
+}
